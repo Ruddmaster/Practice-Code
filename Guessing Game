@@ -1,0 +1,20 @@
+import random
+
+# generate a random number.
+number = random.randint(0, 100)
+# ask a guess from user
+guess = int(input('Please guess a number between 0 and 100: '))
+#how many times it took to guess
+count = 0
+while guess != number:
+    if guess == number:
+        break
+    elif guess > number:
+        print("Too high!")
+        count += 1
+        guess = int(input('Please guess a number between 0 and 100: '))
+    else:
+        print('Too low!')
+        count += 1
+        guess = int(input('Please guess a number between 0 and 100: '))
+print("took you ", count, "guesses!")
